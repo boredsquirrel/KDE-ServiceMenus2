@@ -1,7 +1,8 @@
 # Dependencies:
-# - celluloid
+# - celluloid Flatpak
 #
 # Copyright (C) 2019 Rafael Cavalcanti - rafaelc.org
+# (edited 2024 von Konosseur to modify command)
 # Licensed under GPLv3
 #
 
@@ -14,7 +15,8 @@ X-KDE-Priority=TopLevel
 
 [Desktop Action addToCelluloid]
 Name=Enqueue on Celluloid
+Name[de]=Zu Celluloid Playlist hinzufügen
 Name[nl]=Toevoegen aan Celluloid-wachtrij
 Name[pt_BR]=Adicionar à fila do Celluloid
-Exec=celluloid --enqueue %U
+Exec=/usr/bin/flatpak run run --command=celluloid --file-forwarding io.github.celluloid_player.Celluloid --enqueue %U
 Icon=io.github.celluloid_player.Celluloid
